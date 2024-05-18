@@ -1,0 +1,44 @@
+# Applying Bi-LSTM Model to Better Predict Sentiment Scores for Speech Data
+
+## Partners
+
+- Brenna Farris
+- Eden Stewart
+
+## Research Question
+
+Is using a Bi-LSTM model more accurate for analyzing sentiment contained in political speeches than sentiment dictionaries based on word embeddings?
+
+## Data
+
+The data is examined in the article, “The Automatic Analysis of Emotion in Political Speech Based on Transcripts” by Cochrane et al. The main corpus dataset will be extracted from the Dropbox link in the references section. Other datasets (including coders’ sentiment scores) will be in this GitHub Repository “data” folder
+
+The main corpus dataset has 77,730,436 tokens from speeches in the Canadian House of Commons. The speeches are from the 39th Parliament on January 29, 2006, to the 42nd Parliament on April 19, 2018.
+
+The availability of structured machine-readable Hansard from the 39th Parliament facilitated data collection. It was provided by the Canadian House of Commons.
+
+A dataset containing coder demographic information is 5.19 MB and 5,279 rows by 138 columns. A dataset containing the coder’s sentiment scores is 132 KB with 1,020 rows by 39 columns. The dataset of the speech corpus is 1.29 GB and has 350,675 rows and 47 columns. 
+
+The observations will be the sentiment scores. We hope to compare the accuracy of the sentiment scores that our model generated to the accuracy scores from the coders from the study.
+
+## Methods
+
+We will use the Bidirectional Long Short-Term Memory (Bi-LSTM) model due to its solid performance record with text data from taking the context of text forward and backward at the same time.
+
+## Results
+
+## Discussion
+
+## References
+- “Bidirectional LSTM in NLP.” GeeksforGeeks, 8 June 2023, https://www.geeksforgeeks.org/bidirectional-lstm-in-nlp/.
+- Cochrane, Christopher. Ccochrane/emotionTranscripts. 2018. 20 June 2023. GitHub, https://github.com/ccochrane/emotionTranscripts.
+- Cochrane, C., Rheault, L., Godbout, J. F., Whyte, T., Wong, M. W. C., & Borwein, S. (2022). The Automatic Analysis of Emotion in Political Speech Based on Transcripts. Political Communication, 39(1), 98–121. https://doi.org/10.1080/10584609.2021.1952497 
+- “hansardExtractedSpeechesFull.Csv.Zip.”Dropbox, https://www.dropbox.com/s/4xzw3rscu7x7xn3/hansardExtractedSpeechesFull.csv.zip?dl=0&e=1. Accessed 13 May 2024.
+- R, Srivignesh. “Sentiment Analysis Using Bidirectional Stacked LSTM.” Analytics Vidhya, 12 Aug. 2021, https://www.analyticsvidhya.com/blog/2021/08/sentiment-analysis-using-bidirectional-stacked-lstm/.
+- Senthil Kumar, N.K., Malarvizhi, N. Bi-directional LSTM–CNN Combined method for Sentiment Analysis in Part of Speech Tagging (PoS). Int J Speech Technol 23, 373–380 (2020). https://doi.org/10.1007/s10772-020-09716-9 
+- Sentiment Analysis: Bidirectional LSTM. https://kaggle.com/code/virajjayant/sentiment-analysis-bidirectional-lstm. Accessed 18 May 2024.
+- Sentiment Analysis with Bidirectional LSTM. https://kaggle.com/code/liliasimeonova/sentiment-analysis-with-bidirectional-lstm. Accessed 18 May 2024.
+- Team, Keras. Keras Documentation: Recurrent Layers. https://keras.io/api/layers/recurrent_layers/. Accessed 18 May 2024.
+- Thetechwriters. “Emotion Detection Using Bidirectional LSTM and Word2Vec.” Analytics Vidhya, 24 Oct. 2021, https://www.analyticsvidhya.com/blog/2021/10/emotion-detection-using-bidirectional-lstm-and-word2vec/.
+- Varma, Harshit. Hrshtv/Twitter-Sentiment-Analysis. 2020. 15 Mar. 2024. GitHub, https://github.com/hrshtv/Twitter-Sentiment-Analysis.
+- Xiao, Z., Liang, P. (2016). Chinese Sentiment Analysis Using Bidirectional LSTM with Word Embedding. In: Sun, X., Liu, A., Chao, HC., Bertino, E. (eds) Cloud Computing and Security. ICCCS 2016. Lecture Notes in Computer Science(), vol 10040. Springer, Cham. https://doi.org/10.1007/978-3-319-48674-1_53 
