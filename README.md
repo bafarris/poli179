@@ -1,4 +1,4 @@
-# Applying Bi-LSTM Model to Better Predict Sentiment Scores for Speech Data
+# Predicting Political Speech Sentiment Scores with Bi-LSTM and Sentence Transformers
 
 ## Partners
 
