@@ -31,11 +31,21 @@ The observations will be the sentiment scores. We hope to compare the accuracy o
 
 ### Pre-Processing
 
-- 
+- Tokenized the text
+- Removed non-alphanumeric words and stop words
+- Replaced missing values with empty strings
+- Created a tokens column with pre-processed text
+- Kept tokens with at least 10 words
+- Converted tokens column to sentences
+- Initialized Word2Vec
+- Gave each vector 300 dimensions
+- Made a context window of 6 words around the target word
+- Ignored words that appear less than 10 times
+- Used 5 iterations of training
 
 ### Method 1
 
-The first method used will be the Bidirectional Long Short-Term Memory (Bi-LSTM) model due to its solid performance record with text data from taking the context of text forward and backward at the same time.
+The first method used will be the Bidirectional Long Short-Term Memory (Bi-LSTM) model due to its solid performance record with text data from taking the context of text forward and backward simultaneously.
 
 ### Method 2
 
@@ -52,9 +62,9 @@ So far, we have been unable to get an accuracy score that is not a 0.
 ## Remaining Work and Challenges
 
 - Too much RAM is being used when processing the entire dataset, so Google Colab keeps crashing.
-- The corpus dataset will not download from Dropbox (file won't unzip) so we are directly loading the file from Dropbox to Google Colab.
+- The corpus dataset will not download from Dropbox (the file won't unzip) so we are directly loading the file from Dropbox to Google Colab.
 - There has been difficulty in splitting the testing and training sets due to an inconsistent number of samples.
-- We are encountering difficulty in lining up the sentiment scores assigned by human coders with sections of the speech text (there is little information on the academic article or Github repository with the datasets about this)
+- We are encountering difficulty in lining up the sentiment scores assigned by human coders with sections of the speech text (there is little information on the academic article or GitHub repository with the datasets about this)
 
 ## References
 - “Bidirectional LSTM in NLP.” GeeksforGeeks, 8 June 2023, https://www.geeksforgeeks.org/bidirectional-lstm-in-nlp/.
