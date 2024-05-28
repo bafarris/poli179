@@ -5,11 +5,9 @@
 - Brenna Farris
 - Eden Stewart
 
-## Introduction
+## Overview
 
 Is using a Bi-LSTM model more accurate for analyzing sentiment contained in political speeches than sentiment dictionaries based on word embeddings?
-
-## Related Work
 
 ## Data
 
@@ -33,7 +31,9 @@ We will use the Bidirectional Long Short-Term Memory (Bi-LSTM) model due to its 
 ### Method 2
 Sentence transformers
 
-## Results and Findings
+## Results and Findings So Far
+
+## Remaining Work and Challenges
 
 ## Discussion and Conclusion
 
