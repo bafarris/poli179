@@ -7,18 +7,22 @@
 
 ## Overview
 
+In our project, we examine political speech text and aim to predict sentiment scores.
+
+### Research Question
+
 Is using a Bi-LSTM model more accurate for analyzing sentiment contained in political speeches than sentiment dictionaries based on word embeddings?
 
-## Data
+### Data
 
 The data is examined in the article, “The Automatic Analysis of Emotion in Political Speech Based on Transcripts” by Cochrane et al. The main corpus dataset will be extracted from the Dropbox link in the references section. Other datasets (including coders’ sentiment scores) will be in this GitHub Repository “data” folder
 
-### Data 1
+#### Data 1
 The main corpus dataset has 77,730,436 tokens from speeches in the Canadian House of Commons. The speeches are from the 39th Parliament on January 29, 2006, to the 42nd Parliament on April 19, 2018.
 
 The availability of structured machine-readable Hansard from the 39th Parliament facilitated data collection. It was provided by the Canadian House of Commons. The dataset of the speech corpus is 1.29 GB and has 350,675 rows and 47 columns. 
 
-### Data 2
+#### Data 2
 The second dataset contains the coder’s sentiment scores and is 132 KB with 1,020 rows by 39 columns.
 
 The observations will be the sentiment scores. We hope to compare the accuracy of the sentiment scores that our model generated to the accuracy scores from the coders from the study.
