@@ -15,7 +15,7 @@ Is using a Bi-LSTM model more accurate for analyzing sentiment contained in poli
 
 ### Data
 
-The data is examined in the article, “The Automatic Analysis of Emotion in Political Speech Based on Transcripts” by Cochrane et al. The main corpus dataset will be extracted from the Dropbox link in the references section. Other datasets (including coders’ sentiment scores) will be in this GitHub Repository “data” folder
+The data is examined in the article, “The Automatic Analysis of Emotion in Political Speech Based on Transcripts” by Cochrane et al. The main corpus dataset will be extracted from the Dropbox link in the references section. Other datasets (including coders’ sentiment scores) will be in this GitHub Repository “data” folder.
 
 #### Dataset 1
 The main corpus dataset has 77,730,436 tokens from speeches in the Canadian House of Commons. The speeches are from the 39th Parliament on January 29, 2006, to the 42nd Parliament on April 19, 2018.
@@ -31,6 +31,8 @@ The observations will be the sentiment scores. We hope to compare the accuracy o
 
 ### Pre-Processing
 
+- Loaded both datasets
+- Calculated and added average sentiment score for each row in the human coder dataset
 - Tokenized the text
 - Removed non-alphanumeric words and stop words
 - Replaced missing values with empty strings
@@ -46,6 +48,21 @@ The observations will be the sentiment scores. We hope to compare the accuracy o
 ### Method 1
 
 The first method used will be the Bidirectional Long Short-Term Memory (Bi-LSTM) model due to its solid performance record with text data from taking the context of text forward and backward simultaneously.
+
+(So far we have been using a sample of the full data so that it doesn't use up too much RAM)
+
+- Adjusted sample size to match both data frames
+- Created a target variable (y) from the sampled sentiment scores
+- Initialized tokenizer
+- Created a token dictionary from the 'speech' column
+- Converted texts to sequences of integers
+- Padded sentences to max length
+- Split the data into training and testing sets
+- Built the Bi-LSTM model
+- Complied the model
+- Trained the model
+- Evaluated the model with the testing data
+- Examined the accuracy score of the model
 
 ### Method 2
 
