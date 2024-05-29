@@ -28,12 +28,7 @@ The main corpus dataset has 77,730,436 tokens from political speeches in the Can
 
 The dataset containing all of the human coders' sentiment scores from the entirety of the Cochrane et al. study is located in this repository under data/fullCodingData.csv. It was originally accessed through this GitHub repository: https://github.com/ccochrane/emotionTranscripts?tab=readme-ov-file
 
-The dataset that contains the segments of speech text and their corresponding human-assigned sentiment scores is located in this repository under data/w2vScores.csv. This is the dataset primarily used for our coding purposes. It was originally accessed through this GitHub repository: https://github.com/ccochrane/emotionTranscripts?tab=readme-ov-file
-
-#### Dataset 2
-The second dataset contains the coder’s sentiment scores and is 132 KB with 1,020 rows by 39 columns.
-
-The observations will be the sentiment scores. We hope to compare the accuracy of the sentiment scores that our model generated to the accuracy scores from the coders from the study.
+The dataset that contains the segments of speech text and their corresponding human-assigned sentiment scores is located in this repository under data/w2vScores.csv. It has 1020 rows, 16 columns, and is 486 KB. This is the dataset primarily used for our coding purposes. It was originally accessed through this GitHub repository: https://github.com/ccochrane/emotionTranscripts?tab=readme-ov-file
 
 ## Methodology
 
