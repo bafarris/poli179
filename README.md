@@ -1,17 +1,24 @@
 # Predicting Political Speech Sentiment Scores with Bi-LSTM and Sentence Transformers
 
+> Keywords: BiLSTM (Bidirectional LSTM), Sentence Transformers
+
 ## Partners
 
 - Brenna Farris
 - Eden Stewart
 
-## Overview
+## Introduction
 
-In our project, we examine political speech text and aim to predict sentiment scores.
+In this study, we aim to examine political speech text and predict sentiment scores. We investigate how we can further explore predicting sentiment scores in this context through the use of a BiLSTM model and sentence transformers. What we find can be informative for future sentiment score predictions in political science through various machine learning models.
 
 ### Research Question
 
 Is using a Bi-LSTM model more accurate for analyzing sentiment contained in political speeches than sentiment dictionaries based on word embeddings?
+
+## Methods
+
+- BiLSTM
+- Sentence Transformers
 
 ### Data
 
@@ -84,6 +91,7 @@ So far, we have been unable to get an accuracy score that is not a 0.
 - We are encountering difficulty in lining up the sentiment scores assigned by human coders with sections of the speech text (there is little information on the academic article or GitHub repository with the datasets about this)
 
 ## References
+- Aarsen, Nils Reimers, Tom. Sentence-Transformers: Multilingual Text Embeddings. 3.0.0. PyPI, https://www.SBERT.net. Accessed 29 May 2024.
 - “Bidirectional LSTM in NLP.” GeeksforGeeks, 8 June 2023, https://www.geeksforgeeks.org/bidirectional-lstm-in-nlp/.
 - Cochrane, Christopher. Ccochrane/emotionTranscripts. 2018. 20 June 2023. GitHub, https://github.com/ccochrane/emotionTranscripts.
 - Cochrane, C., Rheault, L., Godbout, J. F., Whyte, T., Wong, M. W. C., & Borwein, S. (2022). The Automatic Analysis of Emotion in Political Speech Based on Transcripts. Political Communication, 39(1), 98–121. https://doi.org/10.1080/10584609.2021.1952497 
