@@ -11,14 +11,14 @@
 
 In this study, we aim to examine political speech text and predict sentiment scores. We investigate how we can further explore predicting sentiment scores in this context through the use of a BiLSTM model and sentence transformers. What we find can be informative for future sentiment score predictions in political science through various machine learning models.
 
-### Research Question
-
-Is using a Bi-LSTM model more accurate for analyzing sentiment contained in political speeches than sentiment dictionaries based on word embeddings?
-
 ## Methods
 
 - BiLSTM
 - Sentence Transformers
+
+## Hypothesis
+
+In this study, we ask whether a BiLSTM model or sentence transformers can be more accurate at predicting sentiment scores for political speech than previously used methods. Cochrane et al. tested several methods for this goal and found that dictionaries based on word embeddings perform the best within their tested methods group (114). Though we are unsure if a BiLSTM or sentence transformers can surpass their level of accuracy, we hypothesize that utilization of the BiLSTM model will perform well with sentiment score prediction due to the structure of the BiLSTM model and how it processes text context (Thetechwriters).
 
 ### Data
 
