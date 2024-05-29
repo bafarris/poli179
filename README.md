@@ -20,14 +20,15 @@ In this study, we aim to examine political speech text and predict sentiment sco
 
 In this study, we ask whether a BiLSTM model or sentence transformers can be more accurate at predicting sentiment scores for political speech than previously used methods. Cochrane et al. tested several methods for this goal and found that dictionaries based on word embeddings perform the best within their tested methods group (114). Though we are unsure if a BiLSTM or sentence transformers can surpass their level of accuracy, we hypothesize that utilization of the BiLSTM model will perform well with sentiment score prediction due to the structure of the BiLSTM model and how it processes text context (Thetechwriters).
 
-### Data
+## Data
 
-The data is examined in the article, “The Automatic Analysis of Emotion in Political Speech Based on Transcripts” by Cochrane et al. The main corpus dataset will be extracted from the Dropbox link in the references section. Other datasets (including coders’ sentiment scores) will be in this GitHub Repository “data” folder.
+The data examined originates from the article, “The Automatic Analysis of Emotion in Political Speech Based on Transcripts” by Cochrane et al. 
 
-#### Dataset 1
-The main corpus dataset has 77,730,436 tokens from speeches in the Canadian House of Commons. The speeches are from the 39th Parliament on January 29, 2006, to the 42nd Parliament on April 19, 2018.
+The main corpus dataset has 77,730,436 tokens from political speeches in the Canadian House of Commons. The speeches are from the 39th Parliament on January 29, 2006, to the 42nd Parliament on April 19, 2018. The availability of structured machine-readable Hansard from the 39th Parliament facilitated data collection. It was provided by the Canadian House of Commons. The dataset of the speech corpus is 1.29 GB and has 350,675 rows and 47 columns. This corpus dataset can be accessed through this DropBox link: https://www.dropbox.com/s/4xzw3rscu7x7xn3/hansardExtractedSpeechesFull.csv.zip?e=1&dl=0
 
-The availability of structured machine-readable Hansard from the 39th Parliament facilitated data collection. It was provided by the Canadian House of Commons. The dataset of the speech corpus is 1.29 GB and has 350,675 rows and 47 columns. 
+The dataset containing all of the human coders' sentiment scores from the entirety of the Cochrane et al. study is located in this repository under data/fullCodingData.csv. It was originally accessed through this GitHub repository: https://github.com/ccochrane/emotionTranscripts?tab=readme-ov-file
+
+The dataset that contains the segments of speech text and their corresponding human-assigned sentiment scores is located in this repository under data/w2vScores.csv. This is the dataset primarily used for our coding purposes. It was originally accessed through this GitHub repository: https://github.com/ccochrane/emotionTranscripts?tab=readme-ov-file
 
 #### Dataset 2
 The second dataset contains the coder’s sentiment scores and is 132 KB with 1,020 rows by 39 columns.
