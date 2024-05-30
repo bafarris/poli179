@@ -1,4 +1,4 @@
-# Predicting Political Speech Sentiment Scores with Bi-LSTM and Sentence Transformers
+# Predicting Political Speech Sentiment Scores with BiLSTM and Sentence Transformers
 
 > Keywords: BiLSTM (Bidirectional LSTM), Sentence Transformers
 
@@ -34,42 +34,34 @@ The dataset that contains the segments of speech text and their corresponding hu
 
 ### Pre-Processing
 
-- Loaded both datasets
-- Calculated and added average sentiment score for each row in the human coder dataset
-- Tokenized the text
-- Removed non-alphanumeric words and stop words
-- Replaced missing values with empty strings
-- Created a tokens column with pre-processed text
-- Kept tokens with at least 10 words
-- Converted tokens column to sentences
-- Initialized Word2Vec
-- Gave each vector 300 dimensions
-- Made a context window of 6 words around the target word
-- Ignored words that appear less than 10 times
-- Used 5 iterations of training
+#### BiLSTM Pre-Processing
+- Loading data
+  - Load dataset from CSV file hosted on GitHub (contains human coder sentiment scores and corresponding segments of corpus)
+- Examining data
+  - Examine the first few rows of the dataset to gain a better understanding
+  - Compute the range of sentiment scores in the dataset
+- Text pre-processing
+  - Tokenize speech text data
+    - Convert text to lowercase
+    - Split text into words
+    - Remove stop words
+- Train Word2Vec model
+  - Train on tokens
+  - This converts the words into numerical vectors to capture semantic values
+- Prepare sequences
+  - Convert tokens into sequences of integers (maximum length 100)
+- Prepare sentiment scores
+  - Store and scale to a range of -1.24 to 2.36 using MinMaxScaler
+- Split data into testing and training sets
+  - Save 20% for testing
 
-### Method 1
+#### Sentence Transformers Pre-Processing
 
-The first method used will be the Bidirectional Long Short-Term Memory (Bi-LSTM) model due to its solid performance record with text data from taking the context of text forward and backward simultaneously.
+#### Method 1: BiLSTM
 
-(So far we have been using a sample of the full data so that it doesn't use up too much RAM)
 
-- Adjusted sample size to match both data frames
-- Created a target variable (y) from the sampled sentiment scores
-- Initialized tokenizer
-- Created a token dictionary from the 'speech' column
-- Converted texts to sequences of integers
-- Padded sentences to max length
-- Split the data into training and testing sets
-- Built the Bi-LSTM model
-- Complied the model
-- Trained the model
-- Evaluated the model with the testing data
-- Examined the accuracy score of the model
 
-### Method 2
-
-The second method used to compare will be sentence transformers.
+#### Method 2: Sentence Transformers
 
 ## Evaluation
 
