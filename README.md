@@ -57,11 +57,20 @@ The dataset that contains the segments of speech text and their corresponding hu
 
 #### Sentence Transformers Pre-Processing
 
-#### Method 1: BiLSTM
+### Method 1: BiLSTM
 
+- We began by initializing the Sequential model.
+- We then added an embedding layer that turns the integers into vectors.
+- Next, we applied the BiLSTM layer, which uses past and future information.
+- We then added a dense layer.
+  - We used a linear activation function when classifying the sentiment scores as a continuous variable.
+  - We used a sigmoid activation function when classifying the sentiment scores as a binary variable.
+- After, we complied the model with an Adam optimizer.
+  - We used MSE for continuous application.
+  - We used binary cross entropy for binary application.
+- We then evaluated the models through the MSE (continuous), accuracy score (binary), and F-1 score (binary).
 
-
-#### Method 2: Sentence Transformers
+### Method 2: Sentence Transformers
 
 ## Evaluation
 
