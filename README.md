@@ -78,11 +78,13 @@ We will evaluate these methods through a couple of different metrics.
 
 For the BiLSTM model, we will evaluate based on MSE when applying sentiment scores as a continuous variable, and accuracy and F-1 score when binarizing the sentiment scores.
 
-## Results and Findings So Far
+## Results
 
 ### Bi-LSTM Results
 
-So far, we have been unable to get an accuracy score that is not a 0. 
+- MSE: Approximately 0.188
+- Accuracy: Approximately 0.52
+- F-1 Score: Approximately 0.684
 
 ### Sentence Transformer Results
 
