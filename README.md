@@ -92,10 +92,10 @@ For the BiLSTM model, we will evaluate based on MSE when applying sentiment scor
 
 ### Challenges and Limitations
 
-- Too much RAM is being used when processing the entire dataset, so Google Colab keeps crashing.
-- The corpus dataset will not download from Dropbox (the file won't unzip) so we are directly loading the file from Dropbox to Google Colab.
+- The corpus dataset will not download from Dropbox (the file won't unzip) so we are directly loading the file from Dropbox to Google Colab when needed.
 - There has been difficulty in splitting the testing and training sets due to an inconsistent number of samples.
-- We are encountering difficulty in lining up the sentiment scores assigned by human coders with sections of the speech text (there is little information on the academic article or GitHub repository with the datasets about this)
+- Sentiment scores ranged from -1.24 to 2.36 in the dataset (not 0 to 10 as described in the journal).
+  - We are concerned that this may influence method applications and accuracy of results.
 
 ### Future Work
 
