@@ -71,6 +71,12 @@ The first method used will be the Bidirectional Long Short-Term Memory (Bi-LSTM)
 
 The second method used to compare will be sentence transformers.
 
+## Evaluation
+
+We will evaluate these methods through a couple of different metrics. 
+
+For the BiLSTM model, we will evaluate based on MSE when applying sentiment scores as a continuous variable, and accuracy and F-1 score when binarizing the sentiment scores.
+
 ## Results and Findings So Far
 
 ### Bi-LSTM Results
@@ -79,12 +85,16 @@ So far, we have been unable to get an accuracy score that is not a 0.
 
 ### Sentence Transformer Results
 
-## Remaining Work and Challenges
+## Discussions
+
+### Challenges and Limitations
 
 - Too much RAM is being used when processing the entire dataset, so Google Colab keeps crashing.
 - The corpus dataset will not download from Dropbox (the file won't unzip) so we are directly loading the file from Dropbox to Google Colab.
 - There has been difficulty in splitting the testing and training sets due to an inconsistent number of samples.
 - We are encountering difficulty in lining up the sentiment scores assigned by human coders with sections of the speech text (there is little information on the academic article or GitHub repository with the datasets about this)
+
+### Future Work
 
 ## References
 - Aarsen, Nils Reimers, Tom. Sentence-Transformers: Multilingual Text Embeddings. 3.0.0. PyPI, https://www.SBERT.net. Accessed 29 May 2024.
