@@ -56,6 +56,23 @@ The dataset that contains the segments of speech text and their corresponding hu
   - Save 20% for testing
 
 #### Sentence Transformers Pre-Processing
+- Loading data
+  - Load dataset from CSV file hosted on GitHub (contains human coder sentiment scores and corresponding segments of corpus)
+- Examining data
+  - Examine the first few rows of the dataset to gain a better understanding
+  - Compute the range of sentiment scores in the dataset
+- Text pre-processing
+  - Tokenize speech text data
+    - Convert text to lowercase
+    - Split text into words
+    - Remove stop words
+- Train Word2Vec model
+  - Train on tokens
+  - This converts the words into numerical vectors to capture semantic values
+- Prepare sequences
+  - Convert tokens into sequences of integers (maximum length 100)
+- Create sentence transformer embeddings using “all-MiniLM-L6-v2”
+- Split the embeddings and sentiment data into training and testing sets
 
 ### Method 1: BiLSTM
 
@@ -71,6 +88,12 @@ The dataset that contains the segments of speech text and their corresponding hu
 - We then evaluated the models through the MSE (continuous), accuracy score (binary), and F-1 score (binary).
 
 ### Method 2: Sentence Transformers
+
+- We began by initializing the linear regression model.
+- We then fit the regression model to the training data.
+- For the continuous treatment, we predicted the sentiment based on the test data.
+- After, we binarized the sentiment scores.
+- We then evaluated the models through the MSE (continuous), accuracy score (binary), and F-1 score (binary).
 
 ## Evaluation
 
@@ -100,16 +123,34 @@ For the BiLSTM model, we will evaluate based on MSE when applying sentiment scor
 ### Future Work
 
 ## References
-- Aarsen, Nils Reimers, Tom. Sentence-Transformers: Multilingual Text Embeddings. 3.0.0. PyPI, https://www.SBERT.net. Accessed 29 May 2024.
-- “Bidirectional LSTM in NLP.” GeeksforGeeks, 8 June 2023, https://www.geeksforgeeks.org/bidirectional-lstm-in-nlp/.
-- Cochrane, Christopher. Ccochrane/emotionTranscripts. 2018. 20 June 2023. GitHub, https://github.com/ccochrane/emotionTranscripts.
-- Cochrane, C., Rheault, L., Godbout, J. F., Whyte, T., Wong, M. W. C., & Borwein, S. (2022). The Automatic Analysis of Emotion in Political Speech Based on Transcripts. Political Communication, 39(1), 98–121. https://doi.org/10.1080/10584609.2021.1952497 
-- “hansardExtractedSpeechesFull.Csv.Zip.”Dropbox, https://www.dropbox.com/s/4xzw3rscu7x7xn3/hansardExtractedSpeechesFull.csv.zip?dl=0&e=1. Accessed 13 May 2024.
-- R, Srivignesh. “Sentiment Analysis Using Bidirectional Stacked LSTM.” Analytics Vidhya, 12 Aug. 2021, https://www.analyticsvidhya.com/blog/2021/08/sentiment-analysis-using-bidirectional-stacked-lstm/.
-- Senthil Kumar, N.K., Malarvizhi, N. Bi-directional LSTM–CNN Combined method for Sentiment Analysis in Part of Speech Tagging (PoS). Int J Speech Technol 23, 373–380 (2020). https://doi.org/10.1007/s10772-020-09716-9 
-- Sentiment Analysis: Bidirectional LSTM. https://kaggle.com/code/virajjayant/sentiment-analysis-bidirectional-lstm. Accessed 18 May 2024.
-- Sentiment Analysis with Bidirectional LSTM. https://kaggle.com/code/liliasimeonova/sentiment-analysis-with-bidirectional-lstm. Accessed 18 May 2024.
-- Team, Keras. Keras Documentation: Recurrent Layers. https://keras.io/api/layers/recurrent_layers/. Accessed 18 May 2024.
-- Thetechwriters. “Emotion Detection Using Bidirectional LSTM and Word2Vec.” Analytics Vidhya, 24 Oct. 2021, https://www.analyticsvidhya.com/blog/2021/10/emotion-detection-using-bidirectional-lstm-and-word2vec/.
-- Varma, Harshit. Hrshtv/Twitter-Sentiment-Analysis. 2020. 15 Mar. 2024. GitHub, https://github.com/hrshtv/Twitter-Sentiment-Analysis.
-- Xiao, Z., Liang, P. (2016). Chinese Sentiment Analysis Using Bidirectional LSTM with Word Embedding. In: Sun, X., Liu, A., Chao, HC., Bertino, E. (eds) Cloud Computing and Security. ICCCS 2016. Lecture Notes in Computer Science(), vol 10040. Springer, Cham. https://doi.org/10.1007/978-3-319-48674-1_53 
+Aarsen, Nils Reimers, Tom. Sentence-Transformers: Multilingual Text Embeddings. 3.0.0. PyPI, https://www.SBERT.net. Accessed 29 May 2024.
+
+“Bidirectional LSTM in NLP.” GeeksforGeeks, 8 June 2023, https://www.geeksforgeeks.org/bidirectional-lstm-in-nlp/.
+
+Cochrane, Christopher. Ccochrane/emotionTranscripts. 2018. 20 June 2023. GitHub, https://github.com/ccochrane/emotionTranscripts.
+
+Cochrane, C., Rheault, L., Godbout, J. F., Whyte, T., Wong, M. W. C., & Borwein, S. (2022). The Automatic Analysis of Emotion in Political Speech Based on Transcripts. 
+
+Political Communication, 39(1), 98–121. https://doi.org/10.1080/10584609.2021.1952497 
+
+“hansardExtractedSpeechesFull.Csv.Zip.”Dropbox, https://www.dropbox.com/s/4xzw3rscu7x7xn3/hansardExtractedSpeechesFull.csv.zip?dl=0&e=1. Accessed 13 May 2024.
+
+“MinMaxScaler.” Scikit-Learn, https://scikit-learn/stable/modules/generated/sklearn.preprocessing.MinMaxScaler.html. Accessed 3 June 2024.
+
+“NLTK Stop Words.” Pythonspot, 22 July 2021, https://pythonspot.com/nltk-stop-words/.
+
+R, Srivignesh. “Sentiment Analysis Using Bidirectional Stacked LSTM.” Analytics Vidhya, 12 Aug. 2021, https://www.analyticsvidhya.com/blog/2021/08/sentiment-analysis-using-bidirectional-stacked-lstm/.
+
+Senthil Kumar, N.K., Malarvizhi, N. “Bi-directional LSTM–CNN Combined method for Sentiment Analysis in Part of Speech Tagging (PoS).” Int J Speech Technol 23, 373–380 (2020). https://doi.org/10.1007/s10772-020-09716-9 
+
+Sentiment Analysis: Bidirectional LSTM. https://kaggle.com/code/virajjayant/sentiment-analysis-bidirectional-lstm. Accessed 18 May 2024.
+
+Sentiment Analysis with Bidirectional LSTM. https://kaggle.com/code/liliasimeonova/sentiment-analysis-with-bidirectional-lstm. Accessed 18 May 2024.
+
+Team, Keras. Keras Documentation: Recurrent Layers. https://keras.io/api/layers/recurrent_layers/. Accessed 18 May 2024.
+
+Thetechwriters. “Emotion Detection Using Bidirectional LSTM and Word2Vec.” Analytics Vidhya, 24 Oct. 2021, https://www.analyticsvidhya.com/blog/2021/10/emotion-detection-using-bidirectional-lstm-and-word2vec/.
+
+Varma, Harshit. Hrshtv/Twitter-Sentiment-Analysis. 2020. 15 Mar. 2024. GitHub, https://github.com/hrshtv/Twitter-Sentiment-Analysis.
+
+Xiao, Z., Liang, P. (2016). “Chinese Sentiment Analysis Using Bidirectional LSTM with Word Embedding.” In: Sun, X., Liu, A., Chao, HC., Bertino, E. (eds) Cloud Computing and Security. ICCCS 2016. Lecture Notes in Computer Science(), vol 10040. Springer, Cham. https://doi.org/10.1007/978-3-319-48674-1_53
