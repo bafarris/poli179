@@ -95,9 +95,7 @@ The dataset that contains the segments of speech text and their corresponding hu
 
 ## Evaluation
 
-We will evaluate these methods through a couple of different metrics. 
-
-For the BiLSTM model, we will evaluate based on MSE when applying sentiment scores as a continuous variable, and accuracy and F-1 score when binarizing the sentiment scores.
+We will evaluate these methods through a couple of different metrics. We will evaluate based on MSE when applying sentiment scores as a continuous variable, and accuracy and F-1 score when binarizing the sentiment scores.
 
 ## Results
 
