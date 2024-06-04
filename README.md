@@ -69,10 +69,6 @@ The dataset that contains the segments of speech text and their corresponding hu
 - Train Word2Vec model
   - Train on tokens
   - This converts the words into numerical vectors to capture semantic values
-- Prepare sequences
-  - Convert tokens into sequences of integers (maximum length 100)
-- Create sentence transformer embeddings using “all-MiniLM-L6-v2”
-- Split the embeddings and sentiment data into training and testing sets
 
 ### Method 1: BiLSTM
 
@@ -89,7 +85,9 @@ The dataset that contains the segments of speech text and their corresponding hu
 
 ### Method 2: Sentence Transformers
 
-- We began by initializing the linear regression model.
+- We began by creating sentence transformer embeddings using “all-MiniLM-L6-v2”.
+- Next, we split the embeddings and sentiment data into training and testing sets.
+- Then we initiated the linear regression model.
 - We then fit the regression model to the training data.
 - For the continuous treatment, we predicted the sentiment based on the test data.
 - After, we binarized the sentiment scores.
