@@ -109,6 +109,10 @@ For the BiLSTM model, we will evaluate based on MSE when applying sentiment scor
 
 ### Sentence Transformer Results
 
+- MSE: Approximately 0.12
+- Accuracy: Approximately 0.833
+- F-1 Score: Approximately 0.849
+
 ## Discussions
 
 ### Challenges and Limitations
