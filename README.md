@@ -115,6 +115,19 @@ We will evaluate these methods through a couple of different metrics. We will ev
 
 Overall, the BiLSTM model produced sub-par results and far inferior scores than that of previous research. However, the sentence transformers performed very well, potentially exceeding previous research methods. 
 
+### Plots
+#### Figure 1 BiLSTM: This scatter plot comparing actual and predicted sentiment scores shows little variation in the predicted scores, suggesting potential issues with the BiLSTM model.
+![image](https://github.com/bafarris/speech-sentiment-bilstm/assets/155195678/e099ee6c-b620-4a2e-9251-73a057d3f347)
+
+#### Figure 2 BiLSTM: This histogram compares the distribution of actual and predicted sentiment scores highlighting the narrow range in predicted scores, indicating the BiLSTM model's limitations.
+![image](https://github.com/bafarris/speech-sentiment-bilstm/assets/155195678/ec0e9f16-3600-4423-a8f3-581b6386e65f)
+
+#### Figure 3 BiLSTM: This confusion matrix shows many false positives, indicating the BiLSTM model often incorrectly predicts positive sentiment.
+![image](https://github.com/bafarris/speech-sentiment-bilstm/assets/155195678/035b882e-d143-41c2-90e3-59bf577d5ad3)
+
+#### Figure 4 BiLSTM: This ROC curve for binary sentiment predictions shows an area of 0.4, indicating this model performs worse than random guessing.
+![image](https://github.com/bafarris/speech-sentiment-bilstm/assets/155195678/d88d5bfe-d8af-4d54-919f-0863f9683fe0)
+
 ### Challenges and Limitations
 
 - Sentiment scores ranged from -1.24 to 2.36 in the dataset (not 0 to 10 as described in the journal).
