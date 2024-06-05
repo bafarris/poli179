@@ -128,6 +128,12 @@ Overall, the BiLSTM model produced sub-par results and far inferior scores than 
 #### Figure 4 BiLSTM: This ROC curve for binary sentiment predictions shows an area of 0.4, indicating this model performs worse than random guessing.
 ![image](https://github.com/bafarris/speech-sentiment-bilstm/assets/155195678/d88d5bfe-d8af-4d54-919f-0863f9683fe0)
 
+#### Figure 5 Sentence Transformers: This confusion matrix for binarized predicted scores from sentence transformers shows mostly favorable outcomes, though there's some worry about the number of cases classified as 0.
+![image](https://github.com/bafarris/speech-sentiment-bilstm/assets/155195678/c442366a-c078-4d77-84d0-a859d2a4b5c0)
+
+#### Figure 6 Sentence Transformers: This scatter plot shows that actual and predicted sentiment scores follow a similar slope from the use of sentence transformers.
+![image](https://github.com/bafarris/speech-sentiment-bilstm/assets/155195678/4aeb51a4-4dbc-4579-bb7c-8b8888554325)
+
 ### Challenges and Limitations
 
 - Sentiment scores ranged from -1.24 to 2.36 in the dataset (not 0 to 10 as described in the journal).
