@@ -151,6 +151,8 @@ Aarsen, Nils Reimers, Tom. Sentence-Transformers: Multilingual Text Embeddings. 
 
 “Bidirectional LSTM in NLP.” GeeksforGeeks, 8 June 2023, https://www.geeksforgeeks.org/bidirectional-lstm-in-nlp/.
 
+Chang, Keng-Chi. POLI 179 Special Topics in Political Methodology: Applied Deep Learning for Social Sciences, 2024, UCSD. Class lecture.
+
 Cochrane, Christopher. Ccochrane/emotionTranscripts. 2018. 20 June 2023. GitHub, https://github.com/ccochrane/emotionTranscripts.
 
 Cochrane, C., Rheault, L., Godbout, J. F., Whyte, T., Wong, M. W. C., & Borwein, S. (2022). The Automatic Analysis of Emotion in Political Speech Based on Transcripts. 
