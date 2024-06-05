@@ -99,7 +99,7 @@ We will evaluate these methods through a couple of different metrics. We will ev
 
 ## Results
 
-### Bi-LSTM Results
+### BiLSTM Results
 
 - MSE: Approximately 0.188
 - Accuracy: Approximately 0.52
@@ -113,14 +113,19 @@ We will evaluate these methods through a couple of different metrics. We will ev
 
 ## Discussions
 
+Overall, the BiLSTM model produced sub-par results and far inferior scores than that of previous research. However, the sentence transformers performed very well, potentially exceeding previous research methods. 
+
 ### Challenges and Limitations
 
-- The corpus dataset will not download from Dropbox (the file won't unzip) so we are directly loading the file from Dropbox to Google Colab when needed.
-- There has been difficulty in splitting the testing and training sets due to an inconsistent number of samples.
 - Sentiment scores ranged from -1.24 to 2.36 in the dataset (not 0 to 10 as described in the journal).
   - We are concerned that this may influence method applications and accuracy of results.
+  - We tried to use the MinMaxScaler to fix this issue but did not see a significant change in the accuracy score when applied.
+- We do not know exactly how the previous researchers pre-processed and if they binarized their results to test for accuracy.
+  - We are concerned that if there were differences in how we binarized results, the evaluation scores may have been influenced differently.
 
 ### Future Work
+
+In the future, we recommend more applications of sentence transformers when trying to predict sentiment scores in political speech. We believe that these findings may have important impacts on predicting political speech sentiment. There may be potential applications to predicting other political events, policy-making decisions, and public perception of political speech.
 
 ## References
 Aarsen, Nils Reimers, Tom. Sentence-Transformers: Multilingual Text Embeddings. 3.0.0. PyPI, https://www.SBERT.net. Accessed 29 May 2024.
